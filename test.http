@@ -1,0 +1,8 @@
+###
+GET https://localhost:5200/weatherforecast/grpc?runs=500
+
+###
+GET https://localhost:5200/weatherforecast/ngrpc?runs=500
+
+###
+GET https://localhost:5200/weatherforecast/grpc-stream

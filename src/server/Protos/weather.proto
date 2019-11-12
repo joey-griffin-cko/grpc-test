@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+option csharp_namespace = "server.Services";
+
+package Weather;
+
+/*
+A service for retrieving weather information.
+*/
+service Weather {
+  rpc GetWeather (WeatherRequest) returns (WeatherReply);
+
+  rpc GetWeatherStream (google.protobuf.Empty) returns (stream WeatherReply);
+}
+
+/*
+This is a request to get the weather.
+*/
+message WeatherRequest {
+  
+}
+
+/*
+This is a response when getting the weather.
+*/
+message WeatherReply {
+  string id = 1;
+  repeated Details details = 2;
+  string someprop = 3;
+}
+
+message Details {
+  string date = 1;
+  int32 temperatureC = 2;
+  int32 temperatureF = 3;
+  string summary = 4;
+}

@@ -1,0 +1,9 @@
+src/client/bin
+src/server/bin
+src/grpc.lib/bin
+test/csharp/server/bin
+
+src/client/obj
+src/server/obj
+src/grpc.lib/obj
+test/csharp/server/obj
